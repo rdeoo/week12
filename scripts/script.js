@@ -24,3 +24,18 @@ if(button.textContent === "Click me!"){button.textContent = "clicked!"}
 else{button.textContent = "Click me!"}
 }
 button.addEventListener("click", changeText);
+
+
+
+//1. find the div
+const buttonContainer = document.querySelector(".button-container")
+///2 define changeBGGreen
+function changeBGGreen(event)
+{
+    // console.log(event.target)
+    // change the style of event.target to have green bg
+    if(event.target.tagName === "BUTTON")
+    {event.target.classList.add("greenBg")}
+}
+//3 add func as event lsitener
+buttonContainer.addEventListener("click",changeBGGreen)
